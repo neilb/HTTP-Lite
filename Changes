@@ -1,5 +1,9 @@
 Revision history for Perl extension HTTP::Lite.
 
+2.3_1 2012-07-10
+    - Neil Bowers (NEILB) granted co-maint by Adam (thanks)
+    - This is a developer release to just test that I've got a working dist :-)
+
 2.3 Tue 14 Dec 2010
 	- No functional changes
 	- Updated Module::Install to 1.00

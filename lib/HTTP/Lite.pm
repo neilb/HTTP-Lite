@@ -8,7 +8,7 @@ use Errno qw(EAGAIN);
 
 use vars qw($VERSION);
 BEGIN {
-	$VERSION = "2.3";
+	$VERSION = "2.3_1";
 }
 
 my $BLOCKSIZE = 65536;
@@ -773,31 +773,31 @@ HTTP::Lite - Lightweight HTTP implementation
 
 =head1 DESCRIPTION
 
-    HTTP::Lite is a stand-alone lightweight HTTP/1.1 implementation
-    for perl.  It is not intended as a replacement for the
-    fully-features LWP module.  Instead, it is intended for use in
-    situations where it is desirable to install the minimal number of
-    modules to achieve HTTP support, or where LWP is not a good
-    candidate due to CPU overhead, such as slower processors.
-    HTTP::Lite is also significantly faster than LWP.
+HTTP::Lite is a stand-alone lightweight HTTP/1.1 implementation
+for perl.  It is not intended as a replacement for the
+fully-features LWP module.  Instead, it is intended for use in
+situations where it is desirable to install the minimal number of
+modules to achieve HTTP support, or where LWP is not a good
+candidate due to CPU overhead, such as slower processors.
+HTTP::Lite is also significantly faster than LWP.
 
-    HTTP::Lite is ideal for CGI (or mod_perl) programs or for bundling
-    for redistribution with larger packages where only HTTP GET and
-    POST functionality are necessary.
+HTTP::Lite is ideal for CGI (or mod_perl) programs or for bundling
+for redistribution with larger packages where only HTTP GET and
+POST functionality are necessary.
 
-    HTTP::Lite supports basic POST and GET operations only.  As of
-    0.2.1, HTTP::Lite supports HTTP/1.1 and is compliant with the Host
-    header, necessary for name based virtual hosting.  Additionally,
-    HTTP::Lite now supports Proxies.
+HTTP::Lite supports basic POST and GET operations only.  As of
+0.2.1, HTTP::Lite supports HTTP/1.1 and is compliant with the Host
+header, necessary for name based virtual hosting.  Additionally,
+HTTP::Lite now supports Proxies.
 
-    As of 2.0.0 HTTP::Lite now supports a callback to allow processing
-    of request data as it arrives.  This is useful for handling very
-    large files without consuming memory.
+As of 2.0.0 HTTP::Lite now supports a callback to allow processing
+of request data as it arrives.  This is useful for handling very
+large files without consuming memory.
 
-    If you require more functionality, such as FTP or HTTPS, please
-    see libwwwperl (LWP).  LWP is a significantly better and more
-    comprehensive package than HTTP::Lite, and should be used instead
-    of HTTP::Lite whenever possible.
+If you require more functionality, such as FTP or HTTPS, please
+see libwwwperl (LWP).  LWP is a significantly better and more
+comprehensive package than HTTP::Lite, and should be used instead
+of HTTP::Lite whenever possible.
 
 =head1 CONSTRUCTOR
 
@@ -1031,13 +1031,15 @@ setting.  Usual choices are GET, POST, PUT, HEAD
 
 =head1 BUGS
 
-    Some broken HTTP/1.1 servers send incorrect chunk sizes
-    when transferring files.  HTTP/1.1 mode is now disabled by
-    default.
+Some broken HTTP/1.1 servers send incorrect chunk sizes when transferring files.
+HTTP/1.1 mode is now disabled by default.
 
 =head1 AUTHOR
 
 Roy Hooper <rhooper@thetoybox.org>
+
+Now co-maintained by Neil Bowers E<lt>neilb@cpan.orgE<gt>.
+This is a developer release to check everything's ok before I do anything else.
 
 =head1 SEE ALSO
 
