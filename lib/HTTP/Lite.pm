@@ -27,7 +27,7 @@ my @urlencode_valid;
 foreach my $char (split('', $URLENCODE_VALID)) {
   $urlencode_valid[ord $char]=$char;
 }
-for (my $n=0;$n<255;$n++) {
+for (my $n=0;$n<256;$n++) {
   if (!defined($urlencode_valid[$n])) {
     $urlencode_valid[$n]=sprintf("%%%02X", $n);
   }
