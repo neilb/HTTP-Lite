@@ -778,7 +778,7 @@ HTTP::Lite - Lightweight HTTP implementation
 
 HTTP::Lite is a stand-alone lightweight HTTP/1.1 implementation
 for perl.  It is not intended as a replacement for the
-fully-features LWP module.  Instead, it is intended for use in
+fully-featured LWP module.  Instead, it is intended for use in
 situations where it is desirable to install the minimal number of
 modules to achieve HTTP support, or where LWP is not a good
 candidate due to CPU overhead, such as slower processors.
@@ -1045,7 +1045,7 @@ HTTP/1.1 mode is now disabled by default.
 Roy Hooper <rhooper@thetoybox.org>
 
 Now co-maintained by Neil Bowers E<lt>neilb@cpan.orgE<gt>.
-This is a developer release to check everything's ok before I do anything else.
+This is a developer release after fixing some bugs, before doing a regular release.
 
 =head1 SEE ALSO
 
