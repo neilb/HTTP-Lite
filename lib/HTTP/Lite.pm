@@ -446,6 +446,7 @@ sub add_req_header
   my $self = shift;
   my ($header, $value) = @_;
   
+  return unless defined($value);
   my $lcheader = lc($header);
   $self->{DEBUG} && $self->DEBUG("add_req_header $header $value");
   ${$self->{headers}}{$lcheader} = $value;
@@ -907,10 +908,13 @@ broken HTTP/1.1 servers.  Use 1 to enable HTTP/1.1 support.
 
 =item delete_req_header ( $header )
 
-Add, Delete, or a HTTP header(s) for the request.  These functions
+Add, Delete, or get a HTTP header(s) for the request.  These functions
 allow you to override any header.  Presently, Host, User-Agent,
 Content-Type, Accept, and Connection are pre-defined by the HTTP::Lite
 module.  You may not override Host, Connection, or Accept.
+
+If you call C<add_req_header()> with C<$value> set to C<undef>,
+then the header won't be added.
 
 To provide (proxy) authentication or authorization, you would use:
 
