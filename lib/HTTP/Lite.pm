@@ -611,11 +611,13 @@ sub http_write
   }
 
   my $size = length($line);
-  my $bytes = syswrite($fh, $line, length($line) , 0 );  # please double check new length limit
-                                                         # is this ok?
-  while ( ($size - $bytes) > 0) {
-    $bytes += syswrite($fh, $line, length($line)-$bytes, $bytes );  # also here
-  }
+  my $total_sent = 0;
+  my $nbytes;
+  do {
+    $nbytes = syswrite($fh, $line, $size - $total_sent, $total_sent );
+    die $! unless(defined($nbytes) || $!{EAGAIN}); # non-recoverable error occured! 
+    $total_sent += $nbytes;
+  } while ($total_sent < $size);
 }
  
 sub http_read
