@@ -139,7 +139,7 @@ sub request
 
   # Parse URL 
   my ($protocol,$host,$junk,$port,$object) = 
-    $url =~ m{^([^:/]+)://([^/:]*)(:(\d+))?(/.*)$};
+    $url =~ m{^([^:/]+)://([^/:]*)(:(\d+))?(/?.*)$};
 
   # Only HTTP is supported here
   if ($protocol ne "http")
