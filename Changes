@@ -1,9 +1,9 @@
 Revision history for Perl extension HTTP::Lite.
 
-2.3_2 2012-07-18
+2.4 2012-07-20
     - Fixed RT #13791, which meant you couldn't request http://foobar.com --
-      had to have to trailing slash on the URL
-    - Don't add request header if value passed is undef (RT #4546)
+      had to have to trailing slash on the URL.
+    - Don't add request header if value passed is undef (RT #4546).
     - Fixed bug where writing the request can get stuck in a loop.
       Bug reported by Florian Kirchmeir. Fix based on Florian's patch.
     - RT #35360 fixed (fix included in report).
