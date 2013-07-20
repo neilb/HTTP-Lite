@@ -8,7 +8,7 @@ use Errno qw(EAGAIN);
 
 use vars qw($VERSION);
 BEGIN {
-	$VERSION = "2.4";
+	$VERSION = "2.41";
 }
 
 my $BLOCKSIZE = 65536;
