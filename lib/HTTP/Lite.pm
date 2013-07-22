@@ -8,7 +8,7 @@ use Errno qw(EAGAIN);
 
 use vars qw($VERSION);
 BEGIN {
-	$VERSION = "2.41";
+	$VERSION = "2.42";
 }
 
 my $BLOCKSIZE = 65536;
@@ -616,7 +616,7 @@ sub http_write
   my $nbytes;
   do {
     $nbytes = syswrite($fh, $line, $size - $total_sent, $total_sent );
-    die $! unless(defined($nbytes) || $!{EAGAIN}); # non-recoverable error occured! 
+    die $! unless(defined($nbytes) || $!{EAGAIN}); # non-recoverable error occurred! 
     $total_sent += $nbytes;
   } while ($total_sent < $size);
 }
@@ -827,7 +827,7 @@ status code will be returned.  200 series status codes represent
 success, 300 represent temporary errors, 400 represent permanent
 errors, and 500 represent server errors.
 
-See F<http://www.w3.org/Protocols/HTTP/HTRESP.html> for detailled
+See F<http://www.w3.org/Protocols/HTTP/HTRESP.html> for detailed
 information about HTTP status codes.
 
 The $data_callback parameter, if used, is a way to filter the data as it is
@@ -861,7 +861,7 @@ An example use to save a document to file is:
 
 At various stages of the request, callbacks may be used to modify the
 behaviour or to monitor the status of the request.  These work like the
-$data_callback parameter to request(), but are more verstaile.  Using
+$data_callback parameter to request(), but are more versatile.  Using
 set_callback disables $data_callback in request()
 
 The callbacks are called as: 
@@ -929,7 +929,7 @@ of each header.
 
 =item body
 
-Returns the body of the document retured by the remote server.
+Returns the body of the document returned by the remote server.
 
 =item headers_array
 

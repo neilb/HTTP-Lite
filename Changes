@@ -1,5 +1,8 @@
 Revision history for Perl module HTTP::Lite
 
+2.42 2013-07-21
+    - Fixed typos reported by David Steinbrunner (thanks!)
+
 2.41 2013-07-20
     - Reformatted this file according to CPAN::Changes::Spec
 
