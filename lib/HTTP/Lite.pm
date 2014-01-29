@@ -2,13 +2,14 @@ package HTTP::Lite;
 
 use 5.005;
 use strict;
+use warnings;
 use Socket 1.3;
 use Fcntl;
 use Errno qw(EAGAIN);
 
 use vars qw($VERSION);
 BEGIN {
-	$VERSION = "2.42";
+	$VERSION = "2.43";
 }
 
 my $BLOCKSIZE = 65536;
