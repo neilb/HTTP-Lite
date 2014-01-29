@@ -2,6 +2,7 @@ Revision history for Perl module HTTP::Lite
 
 2.43 2014-01-29
     - Added "use warnings" (!)
+    - Moved test.pl into t/original-tests.t
 
 2.42 2013-07-21
     - Fixed typos reported by David Steinbrunner (thanks!)

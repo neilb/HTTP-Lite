@@ -14,6 +14,7 @@ Makefile.PL
 MANIFEST			This list of files
 META.yml
 README
+t/original-tests.t
 t/data/HTTP-Lite-Tests/bigbinary.dat
 t/data/HTTP-Lite-Tests/bigbinary.dat.md5
 t/data/HTTP-Lite-Tests/bigtest.txt
@@ -28,7 +29,6 @@ t/data/HTTP-Lite-Tests/nonl.html
 t/data/HTTP-Lite-Tests/post.cgi
 t/data/HTTP-Lite-Tests/test.txt
 t/data/HTTP-Lite-Tests/unchunked.html
-test.pl
 xt/meta.t
 xt/pmv.t
 xt/pod.t
