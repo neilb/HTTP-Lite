@@ -7,10 +7,7 @@ use Socket 1.3;
 use Fcntl;
 use Errno qw(EAGAIN);
 
-use vars qw($VERSION);
-BEGIN {
-	$VERSION = "2.43";
-}
+our $VERSION = '2.44';
 
 my $BLOCKSIZE = 65536;
 my $CRLF = "\r\n";

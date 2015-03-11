@@ -1,5 +1,8 @@
 Revision history for Perl module HTTP::Lite
 
+2.44 2015-03-11 NEILB
+    - Switched to Dist::Zilla
+
 2.43 2014-01-29
     - Directed people to HTTP::Tiny and LWP at the start of the doc
     - Added links to better modules in SEE ALSO
